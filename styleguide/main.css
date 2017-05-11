@@ -1,0 +1,511 @@
+/**
+ * The path to the image folder.
+ * 
+ * @nuclide Image Folder
+ * @section Settings > Paths
+ */
+/**
+ * The path to the fonts folder.
+ * 
+ * @nuclide Fonts Folder
+ * @section Settings > Paths
+ */
+/**
+ * Black.
+ * 
+ * @color
+ * @section Default Color Scheme
+ */
+/**
+ * White.
+ * 
+ * @color
+ * @section Default Color Scheme
+ */
+/**
+ * Accent color -- used mainly for buttons.
+ * 
+ * @color
+ * @section Default Color Scheme
+ */
+/**
+ * Gray -- used for borders and light backgrounds.
+ * 
+ * @color
+ * @section Default Color Scheme
+ */
+/**
+ * Dark gray -- used for dark borders.
+ * 
+ * @color
+ * @deprecated
+ * @section Default Color Scheme
+ */
+/**
+ * The base font size. Only change this once for the entire stylesheet.
+ * 
+ * @nuclide Base Font Size
+ * @section Settings > Typography
+ */
+/**
+ * The default line height.
+ * 
+ * @nuclide Default Line Height
+ * @section Settings > Typography
+ */
+/**
+ * Add rounded corners.
+ * 
+ * @mixin Border Radius
+ * @section Mixins
+ * @param $radius The value of the radius.
+ * @example
+ *  @include border-radius;
+ *  @include border-radius(10px);
+ */
+/**
+ * Clearfix hack for settings clear: both on any element.
+ * 
+ * @mixin Clearfix
+ * @section Mixins
+ * @example
+ *  @include clearfix;
+ */
+/**
+ * Default button.
+ * 
+ * @atom Button
+ * @section Elements
+ * @modifiers
+ *  .secondary A secondary button.
+ * @markup
+ *  <a class="button" href="#">Default button</a>
+ *  <a class="button secondary" href="#">Secondary button</a>
+ * @script
+ *  $('a.button').click(function(){
+ *      alert('Hello!');
+ *  }); 
+ */
+a.button, input[type="submit"] {
+  display: inline-block;
+  border: none;
+  padding: 1em 3em;
+  text-decoration: none;
+  background-color: #ff4e3d;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+a.button:hover, input[type="submit"]:hover {
+  background-color: #ff1f0a;
+}
+a.button.secondary, input.secondary[type="submit"] {
+  background-color: black;
+}
+
+/**
+* The logo.
+* 
+* @molecule Logo
+* @section Components
+* @markup
+*  <div class="logo"><img src="@{image:60:60}" alt="Logo"></div>
+*/
+.logo {
+  float: left;
+  height: 3em;
+  line-height: 3em;
+}
+.logo img {
+  max-width: 3em;
+  height: auto;
+}
+
+/**
+ * The main navigation.
+ * 
+ * @molecule Navigation
+ * @section Components
+ * @markup
+ *  <nav class="main-nav">
+ *      <li><a href="/">Home</a></li>
+ *      <li><a href="/">About</a></li>
+ *      <li><a href="/">Contact</a></li>
+ *  </nav>
+ */
+nav.main-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+  height: 3em;
+  line-height: 3em;
+}
+nav.main-nav li {
+  display: inline;
+  margin: 0 0.5em;
+}
+nav.main-nav li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+nav.main-nav li a:hover {
+  color: #ff4e3d;
+}
+
+/**
+ * A simple call-to-action block.
+ * 
+ * @molecule Simple Call-to-Action
+ * @section Components
+ * @markup
+ *  <div class="simple-cta">
+ *      <h4>Start your free trial today.</h4>
+ *      <a href="order.html" class="button">Start today</a>
+ *  </div>
+ */
+.simple-cta, .cta {
+  text-align: center;
+  padding: 3em;
+  background-color: #f3f3f3;
+  border: 1px solid #cdcdcd;
+}
+.simple-cta a.button, .cta a.button, .simple-cta input[type="submit"], .cta input[type="submit"] {
+  margin-top: 3em;
+}
+
+/**
+ * A single product feature.
+ * 
+ * @molecule Feature
+ * @section Components
+ * @markup
+ *  <div class="feature">
+ *      <h4>Feature title</h4>
+ *      <p>This is a description for the current feature.</p>
+ *      <a href="feature.html" class="button">Learn more</a>
+ *  </div>
+ */
+.feature {
+  text-align: center;
+  width: 100%;
+}
+.feature .h4 {
+  margin-bottom: 2em;
+}
+.feature a.button, .feature input[type="submit"] {
+  margin-bottom: 0;
+}
+
+/**
+ * The default call-to-action block.
+ * 
+ * @molecule Call-to-Action
+ * @section Components
+ * @markup
+ *  <div class="cta">
+ *      <h2>Start a 30-day free trial today.</h2>
+ *      <p>Learn today and be the best.</p>
+ *      <a href="order.html" class="button">Start today</a>
+ *      <p><small>No credit card required.</small></p>
+ *  </div>
+ */
+.cta {
+  background-color: white;
+  border: none;
+}
+.cta small {
+  margin-top: 3em;
+}
+
+/**
+ * The main navigation.
+ * 
+ * @molecule Navigation
+ * @section Components
+ * @markup
+ *  <nav class="main-nav">
+ *      <li><a href="/">Home</a></li>
+ *      <li><a href="/">About</a></li>
+ *      <li><a href="/">Contact</a></li>
+ *  </nav>
+ */
+nav.main-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+  height: 3em;
+  line-height: 3em;
+}
+nav.main-nav li {
+  display: inline;
+  margin: 0 0.5em;
+}
+
+/**
+ * A simple call-to-action block.
+ * 
+ * @molecule Simple Call-to-Action
+ * @section Components
+ * @markup
+ *  <div class="simple-cta">
+ *      <h4>Start your free trial today.</h4>
+ *      <a href="order.html" class="button">Start today</a>
+ *  </div>
+ */
+.simple-cta, .cta {
+  text-align: center;
+  padding: 3em;
+  background-color: #f3f3f3;
+  border: 1px solid #cdcdcd;
+}
+
+/**
+ * A single product feature.
+ * 
+ * @molecule Feature
+ * @section Components
+ * @markup
+ *  <div class="feature">
+ *      <h4>Feature title</h4>
+ *      <p>This is a description for the current feature.</p>
+ *      <a href="feature.html" class="button">Learn more</a>
+ *  </div>
+ */
+.feature .h4 {
+  margin-bottom: 2em;
+}
+.feature a.button, .feature input[type="submit"] {
+  margin-bottom: 0;
+}
+
+/**
+ * The default call-to-action block.
+ * 
+ * @molecule Call-to-Action
+ * @section Components
+ * @markup
+ *  <div class="cta">
+ *      <h2>Start a 30-day free trial today.</h2>
+ *      <p>Learn today and be the best.</p>
+ *      <a href="order.html" class="button">Start today</a>
+ *      <small>No credit card required.</small>
+ *  </div>
+ */
+.cta {
+  background-color: white;
+  border: none;
+}
+.cta small {
+  margin-top: 3em;
+}
+
+/**
+ * Default text input.
+ * 
+ * @atom Text Input
+ * @section Elements
+ * @markup
+ *  <input type="text" placeholder="Name" />
+ */
+input[type="text"] {
+  border: 1px solid #f3f3f3;
+  max-width: 20em;
+  padding: .5em 1em;
+  outline: none;
+}
+
+/**
+ * Default submit input.
+ * 
+ * @atom Submit Input
+ * @section Elements
+ * @markup
+ *  <input type="submit" value="Submit" />
+ */
+input[type="submit"] {
+  border: none;
+}
+
+/**
+ * The main header of the page. It contains the logo and the main navigation.
+ * 
+ * @structure Main Header
+ * @flag full-width
+ * @section Layouts
+ * @markup
+ *  <header class="header">
+ *      @{include:.logo}
+ *      @{include:nav.main-nav}
+ *  </header>
+ */
+.header {
+  margin: 0 auto 3em;
+  width: 90%;
+  padding: 3em 0;
+}
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/**
+ * The main content block of the page. Contains a sidebar and a container on the side.
+ * 
+ * @structure Main Content
+ * @section Layouts
+ * @flag full-width
+ * @markup
+ *  <main>
+ *      <div class="sidebar">
+ *          This is the sidebar content.
+ *      </div>
+ *      <div class="content">
+ *          This is the main content.
+ *      </div>
+ *  </main>
+ */
+main {
+  margin: 0 auto 3em;
+  width: 90%;
+}
+main .sidebar {
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+}
+main .content {
+  float: right;
+  width: 65%;
+}
+main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/**
+ * A list of features arranged as 4 per row.
+ * 
+ * @structure Features
+ * @section Layouts
+ * @markup
+ *  <div class="features">
+ *      @{include:.feature}
+ *      @{include:.feature}
+ *      @{include:.feature}
+ *      @{include:.feature}
+ *  </div>
+ */
+.features {
+  margin-bottom: 3em;
+}
+.features .feature {
+  width: 22%;
+  margin: 0 1.5%;
+  float: left;
+}
+.features:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: black;
+}
+
+/**
+ * Default paragraph.
+ * 
+ * @atom Paragraph
+ * @section Typography Elements
+ * @markup
+ *  <p>Hello world!</p>
+ */
+p {
+  margin-bottom: 1.3em;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+/**
+ * Heading 1.
+ * 
+ * @atom H1
+ * @section Typography Elements
+ * @markup
+ *  <h1>Main title.</h1>
+ */
+h1 {
+  margin-top: 0;
+  font-size: 3.998em;
+}
+
+/**
+ * Heading 2.
+ * 
+ * @atom H2
+ * @section Typography Elements
+ * @markup
+ *  <h2>Subtitle</h2>
+ */
+h2 {
+  font-size: 2.827em;
+}
+
+/**
+ * Heading 3.
+ * 
+ * @atom H3
+ * @section Typography Elements
+ * @markup
+ *  <h3>Small title</h3>
+ */
+h3 {
+  font-size: 1.999em;
+}
+
+/**
+ * Heading 4.
+ * 
+ * @atom H4
+ * @section Typography Elements
+ * @markup
+ *  <h4>Feature title</h4>
+ */
+h4 {
+  font-size: 1.414em;
+}
+
+/**
+ * Small text.
+ * 
+ * @atom Small Text
+ * @section Typography Elements
+ * @markup
+ *  <small>Copyright information.</small>
+ */
+small {
+  font-size: 0.707em;
+}

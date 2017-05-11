@@ -1,0 +1,79 @@
+// Layouts.
+/**
+ * The main header of the page. It contains the logo and the main navigation.
+ * 
+ * @structure Main Header
+ * @flag full-width
+ * @section Layouts
+ * @markup
+ *  <header class="header">
+ *      @{include:.logo}
+ *      @{include:nav.main-nav}
+ *  </header>
+ */
+.header {
+    margin: 0 auto 3em;
+    width: 90%;
+    padding: 3em 0;
+    
+    @include clearfix;
+}
+
+/**
+ * The main content block of the page. Contains a sidebar and a container on the side.
+ * 
+ * @structure Main Content
+ * @section Layouts
+ * @flag full-width
+ * @markup
+ *  <main>
+ *      <div class="sidebar">
+ *          This is the sidebar content.
+ *      </div>
+ *      <div class="content">
+ *          This is the main content.
+ *      </div>
+ *  </main>
+ */
+main {
+    margin: 0 auto 3em;
+    width: 90%;
+
+    .sidebar {
+        float: left;
+        width: 30%;
+        margin-right: 5%;
+    }
+
+    .content {
+        float: right;
+        width: 65%;
+    }
+
+    @include clearfix;
+}
+
+/**
+ * A list of features arranged as 4 per row.
+ * 
+ * @structure Features
+ * @section Layouts
+ * @markup
+ *  <div class="features">
+ *      @{include:.feature}
+ *      @{include:.feature}
+ *      @{include:.feature}
+ *      @{include:.feature}
+ *  </div>
+ */
+.features {
+    margin-bottom: 3em;
+
+    .feature {
+        width: 22%;
+        margin: 0 1.5%;
+        float: left;
+    }
+
+    @include clearfix;
+}

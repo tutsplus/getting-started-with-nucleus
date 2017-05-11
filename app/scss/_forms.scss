@@ -1,0 +1,29 @@
+// Forms.
+/**
+ * Default text input.
+ * 
+ * @atom Text Input
+ * @section Elements
+ * @markup
+ *  <input type="text" placeholder="Name" />
+ */
+input[type="text"] {
+    border: 1px solid $color-gray;
+    max-width: 20em;
+    padding: .5em 1em;
+    outline: none;
+}
+
+/**
+ * Default submit input.
+ * 
+ * @atom Submit Input
+ * @section Elements
+ * @markup
+ *  <input type="submit" value="Submit" />
+ */
+input[type="submit"] {
+    border: none;
+    
+    @extend a.button;
+}

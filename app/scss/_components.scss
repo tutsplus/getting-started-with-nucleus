@@ -1,0 +1,126 @@
+// Components.
+/**
+* The logo.
+* 
+* @molecule Logo
+* @section Components
+* @markup
+*  <div class="logo"><img src="@{image:60:60}" alt="Logo"></div>
+*/
+.logo {
+    float: left;
+    height: 3em;
+    line-height: 3em;
+
+    img {
+        max-width: 3em;
+        height: auto;
+    }
+}
+
+/**
+ * The main navigation.
+ * 
+ * @molecule Navigation
+ * @section Components
+ * @markup
+ *  <nav class="main-nav">
+ *      <li><a href="/">Home</a></li>
+ *      <li><a href="/">About</a></li>
+ *      <li><a href="/">Contact</a></li>
+ *  </nav>
+ */
+nav.main-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    height: 3em;
+    line-height: 3em;
+
+    li {
+        display: inline;
+        margin: 0 0.5em;
+
+        a {
+            text-decoration: none;
+            color: $color-black;
+            font-weight: bold;
+
+            &:hover {
+                color: $color-accent;
+            }
+        }
+    }
+}
+
+/**
+ * A simple call-to-action block.
+ * 
+ * @molecule Simple Call-to-Action
+ * @section Components
+ * @markup
+ *  <div class="simple-cta">
+ *      <h4>Start your free trial today.</h4>
+ *      <a href="order.html" class="button">Start today</a>
+ *  </div>
+ */
+.simple-cta {
+    text-align: center;
+    padding: 3em;
+    background-color: $color-gray;
+    border: 1px solid darken($color-gray, 15%);
+
+    a.button {
+        margin-top: 3em;
+    }
+}
+
+/**
+ * A single product feature.
+ * 
+ * @molecule Feature
+ * @section Components
+ * @markup
+ *  <div class="feature">
+ *      <h4>Feature title</h4>
+ *      <p>This is a description for the current feature.</p>
+ *      <a href="feature.html" class="button">Learn more</a>
+ *  </div>
+ */
+.feature {
+    text-align: center;
+    width: 100%;
+
+    .h4 {
+        margin-bottom: 2em;
+    }
+
+    a.button {
+        margin-bottom: 0;
+    }
+}
+
+/**
+ * The default call-to-action block.
+ * 
+ * @molecule Call-to-Action
+ * @section Components
+ * @markup
+ *  <div class="cta">
+ *      <h2>Start a 30-day free trial today.</h2>
+ *      <p>Learn today and be the best.</p>
+ *      <a href="order.html" class="button">Start today</a>
+ *      <p><small>No credit card required.</small></p>
+ *  </div>
+ */
+ .cta {
+    @extend .simple-cta;
+
+    background-color: $color-white;
+    border: none;
+
+    small {
+        margin-top: 3em;
+    }
+}

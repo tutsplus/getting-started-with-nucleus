@@ -1,0 +1,36 @@
+// Buttons.
+/**
+ * Default button.
+ * 
+ * @atom Button
+ * @section Elements
+ * @modifiers
+ *  .secondary A secondary button.
+ * @markup
+ *  <a class="button" href="#">Default button</a>
+ *  <a class="button secondary" href="#">Secondary button</a>
+ * @script
+ *  $('a.button').click(function(){
+ *      alert('Hello!');
+ *  }); 
+ */
+a.button {
+    display: inline-block;
+    border: none;
+    padding: 1em 3em;
+    text-decoration: none;
+    background-color: $color-accent;
+    color: $color-white;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    &:hover {
+        background-color: darken($color-accent, 10%);
+    }
+
+    &.secondary {
+        background-color: $color-black;
+    }
+    
+    @include border-radius;
+}

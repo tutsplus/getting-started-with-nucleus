@@ -1,0 +1,75 @@
+// Paths.
+/**
+ * The path to the image folder.
+ * 
+ * @nuclide Image Folder
+ * @section Settings > Paths
+ */
+$img-path: "../img";
+
+/**
+ * The path to the fonts folder.
+ * 
+ * @nuclide Fonts Folder
+ * @section Settings > Paths
+ */
+$fonts-path: "../fonts";
+
+// Colors.
+/**
+ * Black.
+ * 
+ * @color
+ * @section Default Color Scheme
+ */
+$color-black: rgb(0, 0, 0);
+
+/**
+ * White.
+ * 
+ * @color
+ * @section Default Color Scheme
+ */
+$color-white: rgb(255, 255, 255);
+
+/**
+ * Accent color -- used mainly for buttons.
+ * 
+ * @color
+ * @section Default Color Scheme
+ */
+$color-accent: rgb(255, 78, 61);
+
+/**
+ * Gray -- used for borders and light backgrounds.
+ * 
+ * @color
+ * @section Default Color Scheme
+ */
+$color-gray: rgb(243, 243, 243);
+
+/**
+ * Dark gray -- used for dark borders.
+ * 
+ * @color
+ * @deprecated
+ * @section Default Color Scheme
+ */
+$color-dark-gray: rgb(243, 243, 243);
+
+// Typography.
+/**
+ * The base font size. Only change this once for the entire stylesheet.
+ * 
+ * @nuclide Base Font Size
+ * @section Settings > Typography
+ */
+$type-base-font-size: 18px;
+
+/**
+ * The default line height.
+ * 
+ * @nuclide Default Line Height
+ * @section Settings > Typography
+ */
+$type-line-height: 1.5;

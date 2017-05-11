@@ -1,0 +1,30 @@
+// Mixins.
+/**
+ * Add rounded corners.
+ * 
+ * @mixin Border Radius
+ * @section Mixins
+ * @param $radius The value of the radius.
+ * @example
+ *  @include border-radius;
+ *  @include border-radius(10px);
+ */
+@mixin border-radius($radius: 5px) {
+    border-radius: $radius;
+}
+
+/**
+ * Clearfix hack for settings clear: both on any element.
+ * 
+ * @mixin Clearfix
+ * @section Mixins
+ * @example
+ *  @include clearfix;
+ */
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
